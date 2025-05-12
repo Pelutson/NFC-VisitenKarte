@@ -1,6 +1,7 @@
 from flask import Flask, request, redirect, abort, render_template_string
 import secrets
 import time
+import os  # <- wichtig für Render-Port
 
 app = Flask(__name__)
 TOKEN_LIFETIME = 60  # Sekunden
@@ -40,4 +41,6 @@ def index():
     return '<p>⛔ Kein Zugriff. Bitte scanne meinen NFC-Chip.</p>'
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Für Render: App auf 0.0.0.0 und dynamischem Port starten
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
