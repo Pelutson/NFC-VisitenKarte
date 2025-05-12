@@ -31,9 +31,9 @@ def visitenkarte():
     # Visitenkarte anzeigen
     return render_template_string("""
         <h1>👋 Hallo, das ist meine digitale Visitenkarte</h1>
-        <p><strong>Name:</strong> Max Mustermann</p>
-        <p><strong>Email:</strong> max@example.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/max">Mein Profil</a></p>
+        <p><strong>Name:</strong> Marc Mp</p>
+        <p><strong>Email:</strong> mpp@mieheplana.com</p>
+        <p><strong>LinkedIn:</strong> <a href="https://de.linkedin.com/in/marc-miehe-plana-9136b0326?trk=people-guest_people_search-card">Mein Profil</a></p>
     """)
 
 @app.route('/')
